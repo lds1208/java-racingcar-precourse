@@ -1,7 +1,5 @@
 package racingcar;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Ui {
@@ -35,7 +33,7 @@ public class Ui {
     }
 
     public static void printEndGameMsg(String winnersName) {
-        System.out.println(winnersName+"가 최종 우승했습니다");
+        System.out.println(winnersName + "가 최종 우승했습니다");
     }
 }
 
