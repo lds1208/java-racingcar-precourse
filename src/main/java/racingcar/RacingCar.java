@@ -8,5 +8,6 @@ public class RacingCar {
     private static void startRacingCar() {
         Cars cars = RacingUtils.createCars();
         RacingCnt racingCnt = RacingUtils.getRacingCnt();
+        Racing.startRacing(cars, racingCnt);
     }
 }

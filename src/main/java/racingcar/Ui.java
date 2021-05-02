@@ -17,5 +17,19 @@ public class Ui {
         String racingCnt = sc.next();
         return racingCnt;
     }
+
+    public static void printStartRacingMsg() {
+        System.out.println("실행 결과");
+    }
+
+    public static void printCurrentCarLocation(Car car) {
+        String carName = car.getName();
+        int carMoveCnt = car.getMoveCnt();
+        System.out.print(carName+": ");
+        for(int i=0; i < carMoveCnt ; i++){
+            System.out.print("-");
+        }
+        System.out.println();
+    }
 }
 

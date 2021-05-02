@@ -9,23 +9,25 @@ public class Racing {
         return CarStatus.STOP;
     }
 
-    public static Cars startRacing(Cars cars, RacingCnt racingCnt) {
+    public static void startRacing(Cars cars, RacingCnt racingCnt) {
+        Ui.printStartRacingMsg();
         for (int i = 0; i < racingCnt.getRacingCnt(); i++) {
             Racing.moveCars(cars);
+            System.out.println();
         }
-        return cars;
     }
 
     private static void moveCars(Cars cars) {
         MoveNumber moveNumber = new MoveNumber();
         for (Car car : cars.getCars()) {
             moveCar(car, moveNumber);
+            Ui.printCurrentCarLocation(car);
         }
     }
 
     private static void moveCar(Car car, MoveNumber moveNumber) {
         int moveNum = moveNumber.getMoveNumber();
-        if ( isMove(moveNum) == CarStatus.GO ){
+        if (isMove(moveNum) == CarStatus.GO) {
             car.go();
         }
     }
