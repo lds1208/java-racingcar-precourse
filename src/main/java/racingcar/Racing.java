@@ -8,5 +8,4 @@ public class Racing {
         }
         return CarStatus.STOP;
     }
-
 }
