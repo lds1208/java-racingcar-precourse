@@ -5,10 +5,10 @@ public class RacingCnt {
 
     public RacingCnt() {
         String racingCnt = "";
-        try{
+        try {
             racingCnt = Ui.getRacingCnt();
             this.racingCnt = Integer.parseInt(racingCnt);
-        } catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.println("숫자만 입력 해주세요.");
             new RacingCnt();
         }
@@ -18,7 +18,7 @@ public class RacingCnt {
         this.racingCnt = racingCnt;
     }
 
-    public int getRacingCnt(){
+    public int getRacingCnt() {
         return racingCnt;
     }
 

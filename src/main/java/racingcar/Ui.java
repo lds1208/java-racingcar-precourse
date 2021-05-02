@@ -1,5 +1,7 @@
 package racingcar;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ui {
@@ -25,11 +27,15 @@ public class Ui {
     public static void printCurrentCarLocation(Car car) {
         String carName = car.getName();
         int carMoveCnt = car.getMoveCnt();
-        System.out.print(carName+": ");
-        for(int i=0; i < carMoveCnt ; i++){
+        System.out.print(carName + ": ");
+        for (int i = 0; i < carMoveCnt; i++) {
             System.out.print("-");
         }
         System.out.println();
+    }
+
+    public static void printEndGameMsg(String winnersName) {
+        System.out.println(winnersName+"가 최종 우승했습니다");
     }
 }
 

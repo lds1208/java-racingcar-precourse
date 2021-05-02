@@ -4,7 +4,7 @@ public class Car {
 
     private String name;
     private int moveCnt;
-    private int rank;
+    private boolean isWinner;
 
     public Car(String name) {
         validateName(name);
@@ -20,8 +20,12 @@ public class Car {
         return moveCnt;
     }
 
-    public int getRank() {
-        return rank;
+    public boolean isWinner() {
+        return isWinner;
+    }
+
+    public void setWinner(boolean winner) {
+        isWinner = winner;
     }
 
     public void go() {
