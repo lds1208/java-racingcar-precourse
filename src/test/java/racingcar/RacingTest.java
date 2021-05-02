@@ -16,8 +16,25 @@ public class RacingTest {
 
     @Test
     @DisplayName("자동차 이동값 범위 테스트")
-    void correctMoveCnt() {
+    void correctMoveNumber() {
         MoveNumber moveNumber = new MoveNumber();
-        assertThat(0 <= moveNumber.getMoveNumber() && moveNumber.getMoveNumber() <= 9 ).isTrue();
+        int moveNum = moveNumber.getMoveNumber();
+        assertThat(0 > moveNum ||  moveNum > 9 ).isFalse();
+    }
+
+    @Test
+    @DisplayName("실제 경주 테스트")
+    void race() {
+        RacingCnt racingCnt = new RacingCnt(3);
+        Cars cars = new Cars("1번차,2번차,3번차");
+        Racing.startRacing(cars, racingCnt);
+        assertThat(cars.getCars().get(0).getName()).isEqualTo("1번차");
+        assertThat(cars.getCars().get(0).getMoveCnt() <= 3).isTrue();
+
+        assertThat(cars.getCars().get(1).getName()).isEqualTo("2번차");
+        assertThat(cars.getCars().get(1).getMoveCnt() <= 3).isTrue();
+
+        assertThat(cars.getCars().get(2).getName()).isEqualTo("3번차");
+        assertThat(cars.getCars().get(2).getMoveCnt() <= 3).isTrue();
     }
 }

@@ -14,6 +14,10 @@ public class RacingCnt {
         }
     }
 
+    public RacingCnt(int racingCnt) {
+        this.racingCnt = racingCnt;
+    }
+
     public int getRacingCnt(){
         return racingCnt;
     }
